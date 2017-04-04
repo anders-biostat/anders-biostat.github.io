@@ -1,0 +1,14 @@
+h1, h2 {
+	font: verdana;
+	color: #990000;
+}
+
+p {
+	font: verdana;
+	font-size: 14pt;
+}
+
+div.outer {
+	max-width: 900px;
+	padding: 20px 5px 10px 40px;
+}
