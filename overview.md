@@ -1,42 +1,62 @@
-Bioinformatics tools for omics data
------------------------------------
+<div class="outer">
+<table width="100%"><tr><td>
+## Anders group at ZMBH
 
-Thanks to maodern assay techniques, biology is transforming into a "data-rich" science. With high-throughput sequencing, mass spectrometry, automated perturbation screens and other "big data" assay technologies, we can now get at the same time a "bird's eye" overview as well as plenty of detail on a set of biological samples. The vast amount of raw data produced this way is, however, of little use without powerful bioinformatics and biostatistics methods to process, analyse, and interpret them.
+# Bioinformatics tools for omics data
+</td><td align="right">
+<a href="http://www.zmbh.uni-heidelberg.de"><img src="http://www.zmbh.uni-heidelberg.de/images/ZMBH_logo.jpg"></a>
+</td>
+</tr></table>
+
+Due to modern assay techniques, biology is transforming into a "data-rich" science. With high-throughput sequencing, mass spectrometry, automated perturbation screens and other "big data" assay technologies, we can now get at the same time a "bird's eye" overview as well as plenty of detail on a set of biological samples. The vast amount of raw data produced this way is, however, of little use without powerful bioinformatics and biostatistics methods to process, analyse, and interpret them.
 
 The new bioinformatics group that I am setting up ZMBH focuses on developing the computational tools that biologists need to find the needles of biological insights in the haystacks of high-throughput assay data.
 
-For a mroe detailled description of our lab, see our projects page []
+## Research strategy
 
-**Research strategy:** 
-
-Computational scientists provide crucial expertise to research in molecular biologist that is complementary to the skill set that a typical biologist or clinical researcher has learned in her or his studies: We know how how to process, organise and explore big data sets, and transform data such that it can be viewed from "just the right angle" to gain new insights into biological systems (exploratory data analysis, EDA) and we know how to ensure that findings are true and reproducible rather than the result of random chance or wishful thinking (inferential statistics).
+Computational scientists provide crucial expertise to research in molecular biologist that is complementary to the skill set that a typical biologist or clinical researcher has learned in her or his studies: We know how how to process, organise and explore big data sets, and transform data such that it can be viewed from "just the right angle" to gain new insights into biological systems (exploratory data analysis, EDA) and we know how to ascertain that findings are true and reproducible rather than the result of random chance or wishful thinking (inferential statistics).
 
 Exploring big data requires tight collaboration, and especially effective communication, between computational scientists and biologists. While only the latter have the in-depth knowledge and intuition of the system under study to know which specific questions should be asked, we know how what questions can be asked from a big data set, and, importantly, we can invent new investigative strategies to ask entirely new kinds of questions that were not accessible before.
 
 For my group, I aim to assemble an interdisciplinary team, drawing not only from bioinformatics and statistics, but also from computer science, physics, engineering and other quantitative subjects, in order to cover a broad field of expertise on methods that can be translated, adapted and expanded for use in molecular medicine.
 
-We will strive to strike a balance between two modes of research: On the one hand, we will craft tailored analysis methods for specific advanced experiments carried out by our wet-lab and clinical colleagues in Heidelberg and elsewhere. On the other hand, we will package such approaches into generally useable software tools that are modular, documented well and easy to use, to ensure that even research group with little or no biostatistics expertise can download and use them, thus making cutting-edge biostatistical methodology available to the research community at large.
+We will strive to strike a balance between two modes of research: On the one hand, we will craft tailored analysis methods for specific advanced experiments carried out by our wet-lab and clinical colleagues in Heidelberg and elsewhere. On the other hand, we will package such approaches into generally usable software tools that are modular, documented well and easy to use, to ensure that even research group with little or no biostatistics expertise can download and use them, thus making cutting-edge biostatistical methodology available to the research community at large.
 
 
-**Topics and projects:**
+## Topics and projects 
+
+### Exploratory analysis of multi-omics data in molecular medicine
+
+A core goal in molecular medicine is help us better understand why different patients with the same disease often react so differently to the same treatment, why some patient recover from a dangerous disease and others, though treated alike, succumb to it &ndash; and ultimately this will pave the way to medical treatments chosen for a specific patient and not just for a disease.
+
+Today, studies often use a whole battery of assay types to get a full molecular characterization of samples from a patient cohort. For example, samples are examined using targeted sequencing, clinical assays, RNA-Seq and finally in-vitro drug sensitivity testing. How can we best work with such heterogeneous data and find differences and commonalities between patients across data types?
+So far, analysis tends to focus at one assay type at a time, and there is a need for advanced methods for integrative analyses that bring together the different platforms employed in multi-omics experiments. We will extend and adapt existing methods from multidimensional statistics and machine learning, as well as develop new approaches, to mine multi-omics data from large-scale molecular-biology studies. For this, we are collaborating with haematology and oncology research groups in Heidelberg and Helsinki.
 
 
-*Interactive visualization of high-dimensional data*
+### Interactive visualization of high-dimensional data
 
 Exploratory data analysis is as much of an art as it is a science. As, unfortunately, our brains cannot conceive high-dimensional data directly, we use many techniques to reduce them to two-dimensional visual representations: scatter plots, biplots, heatmaps, dendrograms, parallel coordinate plots, etc. Nearly all of these are static: optimized to be printed onto a piece of paper and distributed in a printed journal. With the computer mouse being invented more than 50 years ago, it is certainly time for more interactive visualizations, in which we can turn, slice and dice data, look at it from all angles, squeeze and warp and move it to look at specific aspects or corners of our huge data set. We are working on innovative new ways of allowing scientists to explore their data.
 
-The linked-charts frame work: 
+To give a simple example: Ordination and clustering methods try to find data points (e.g. patients), that are similar &ndash; but similar with respect to what? A clinician may want to interactively explore how the similarity of the patient she is treating right now to other patients in the cohort changes if the dimension reduction method does not use all data but puts emphasis (weight) on gene expression data from a specific pathway, drug sensitivity data from a specific drug class or the like. We are therefore working on new ordination techniques (e.g., our [focusedMDS](https://lea-urpa.github.io/focusedMDS.html) tool) and on new interactive heatmap tools.
 
-To give a simple example: Ordination and clustering methods try to find data points (e.g. patients), that are similar -- but similar with respect to what? A clinician may want to interactively explore how the similarity of the patient she is treating right now to other patients in the cohort changes if the dimension reduction method does not use all data but puts emphasis (weight) on gene expression data from a specific pathway, drug sensitivity data from a specific drug class or the like.
-Developing interactive data exploration tools that are not mere gimmicks but actually useful and help with patient care requires tight collaboration between users (doctors, biologists) and developers (bioinformaticians) -- and FIMM is the right place for this. We will search for creative and novel approaches to shed new light on our data, and we will use them not only for FIMM's own project, but also distribute them as powerful but lightweight software tools.
-
-*Data analysis for high-throughput sequencing*
-
-My eralier work was focused on statistical methods for RNA-Seq analysis; specifically, I developed various tools for inference of differential expression (DESeq, DESeq2, DEXSeq) and data sequencing processing (HTSeq). Now, we have collaborations with several wet-lab groups who use novel or customized sequencing techniques to study aspects of cell biology and functional genomics, such as Tag-Seq to assess alternative polyadenylation and ribosomal profiling to understand regulation of translation.
+Often, one wants to jump from plot to plot, in order to drill down from an overview plot showing the results of an analysis into details and back top the raw data. Our *linked-charts* framework makes it very easy to construct such visualization apps with just a few lines of JavaScript; for an early example, see [here](https://kloivenn.github.io/linked-charts/simpleExample.html).
 
 
-*Cohort-scale transcriptomics and proteomics in medical research*
+### Data analysis for high-throughput sequencing
 
+My earlier work was focused on statistical methods for RNA-Seq analysis; specifically, I developed various tools for inference of differential expression (DESeq, DESeq2, DEXSeq) and sequencing data processing (HTSeq). We now have collaborations with several wet-lab groups who use novel or customized sequencing techniques to study aspects of cell biology and functional genomics, such as Tag-Seq to assess alternative polyadenylation and ribosomal profiling to understand regulation of translation. We implement tailored, powerful and statistically sound analysis methods for such non-standard aspects and contribute to data interpretation.
 
+### Transcriptomics and proteomics for large-scale studies
 
-*Transcriptomics:* 
+Many high-throughput methods have been developed for small-scale experiments with few samples but are now increasingly used for large-scale applications, and this raises new questions for statistical inference.
+
+When comparing, e.g., a large number of tumour transcriptomes with transcriptomes of healthy control samples, we do not only expect shifts in mean expression for specific genes. Rather, we also expect other signs of dysregulation: loss of tight regulation and hence increased variance, loss of correlation, changes in co-expression or correlation networks, etc. With large scale data sets now available, we should return to the question of statistical inference of aberrant expression in cancer.
+
+Proteomes are closer to the phenotype than transcriptomes, but are harder to assess. However, recent technological progress is changing this: with the increased mass resolution of modern tandem mass spectrometers and with new procedures (e.g. isobaric labelling), quantitative comparisons of complex proteomics characterizations of many samples becomes feasible. In collaboration with mass-spectrometry groups, we are working on statistical methods to quantitate and infer patterns in cohort-sized proteomics data sets.
+
+## Open positions
+
+If you are interested in our work, think you would fit into the team, and are looking for an internship, MSc project, PhD or post-doc position, send me an e-mail and describe your interests and skills: <a href="mailto:s.anders@zmbh.uni-heidelberg.de">s.anders@zmbh.uni-heidelberg.de</a>
+
+<p align="right">Last change: 2017-04-04</p>
+</div>
