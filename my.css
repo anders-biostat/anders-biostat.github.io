@@ -12,3 +12,18 @@ div.outer {
 	max-width: 900px;
 	padding: 20px 5px 10px 40px;
 }
+
+a:link {
+	color: #AA2020; 
+	text-decoration-line: none
+}
+
+a:active a:hover {
+	color: #CC0000; 
+	text-decoration-line: none
+}
+
+a:visited {
+	color: #880000; 
+	text-decoration-line: none
+}

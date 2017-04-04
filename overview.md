@@ -1,6 +1,6 @@
 <div class="outer">
 <table width="100%"><tr><td>
-## Anders group at ZMBH
+## [Anders group](http://www.zmbh.uni-heidelberg.de/anders/default.shtml) at [ZMBH](http://www.zmbh.uni-heidelberg.de)
 
 # Bioinformatics tools for omics data
 </td><td align="right">
